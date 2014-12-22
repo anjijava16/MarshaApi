@@ -68,16 +68,18 @@ public class StartExamProcessing {
 			List<QuestionsBank> listOfQuestionBank=questionServiceIF.getAllQuestionInfo(firstQuestion,  examResult.getExamId());
 			for(QuestionsBank qsBank:listOfQuestionBank){
 				session.setAttribute("CurrentQuestion", qsBank.getQuestion());
+				session.setAttribute("QuestionNo", qsBank.getQuestionno());
 				session.setAttribute("OptionA", qsBank.getOptionA());
 				session.setAttribute("OptionB",qsBank.getOptionB());
 				session.setAttribute("OptionC", qsBank.getOptionC());
 				session.setAttribute("OptionD",qsBank.getOptionD());
 				session.setAttribute("QuestionNo", firstQuestion);
+				System.out.println(qsBank.getQuestionno()+"  "+qsBank.getQuestion()+"  "+qsBank.getOptionA()+" "+qsBank.getOptionB()+"  "+qsBank.getOptionC());
 			}
 		} catch (ServiceException e) {
 		}
 		
-		
+	
 		return new ModelAndView("examination");
 	}
 

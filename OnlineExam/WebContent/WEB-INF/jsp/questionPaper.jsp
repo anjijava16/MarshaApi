@@ -13,6 +13,7 @@
             {
                 if(ExamCookies[cookieCount].getName().equals("QuestionNo"))
                 {
+                	out.println(ExamCookies[cookieCount].getValue());
                     iQuestionNo = Integer.parseInt(ExamCookies[cookieCount].getValue());
                 }
             }

@@ -127,9 +127,9 @@ function getNextQuestion()
          {   
         setCookie("QuestionNo",QNo,1);
         setCookie("MoveDirection","Next",1);
-    //document.getElementById("testID").innerHTML = QNo;
-    //myframe.contentDocument.getElementById("Debug-Space").innerHTML = QNo;
-    myframe.contentDocument.getElementById("QuestionPaperForm").submit();
+    	//document.getElementById("testID").innerHTML = QNo;
+    	//myframe.contentDocument.getElementById("Debug-Space").innerHTML = QNo;
+    	myframe.contentDocument.getElementById("QuestionPaperForm").submit();
          }
 }
 
@@ -268,11 +268,8 @@ for (i=0;i<ARRcookies.length;i++)
                     <hr/>
         </div>
 <div id="ExamPageQuestionPaper" style="height: 78%; width:99.5%; position: fixed; padding-left: 0px; padding-top: 78px">
-    	<iframe src="questionPaper.jsp" id="QuestionPaperFrame" width="100%" height="100%" frameborder="0" name="QuestionPaper">
-    
-    </iframe>
+	<jsp:include page="/WEB-INF/jsp/questionPaper.jsp"/>
     <hr/>
-    
     <a href="javascript:void(0)" onClick="getPreviousQuestion()" style="padding: 6px"><img src ="images/previous-question-btn.png" style="border: 0"/></a>
     <a href="javascript:void(0)" style="padding: 6px;" onClick="getNextQuestion()"><img src ="images/next-question-exam.png" style="border: 0"/></a>
     
