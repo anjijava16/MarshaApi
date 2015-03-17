@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.util.*" %>
-<%@page import="com.iwinner.store.model.UserRole" %>
+<%@page import="com.iwinner.rms.model.UserRole" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -104,7 +104,7 @@ function stateChangeObject(){
 </head>
 <%
 	
-List<UserRole> listOfRoles=(List)session.getAttribute("userRolL");
+List<UserRole> listOfRoles=(List<UserRole>)session.getAttribute("userRolL");
 
 %>
 <div style="padding: 10px 0 0 100px;">
